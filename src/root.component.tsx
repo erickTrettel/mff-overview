@@ -1,3 +1,10 @@
-export default function Root(props) {
-  return <section>{props.name} is mounted!</section>;
+import { OverviewContextProvider } from "./contexts/OverviewContext";
+import { Overview } from "./pages/Overview";
+
+export default function Root() {
+  return (
+    <OverviewContextProvider>
+      <Overview />
+    </OverviewContextProvider>
+  );
 }
